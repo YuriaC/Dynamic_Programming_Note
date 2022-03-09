@@ -1,4 +1,6 @@
 import copy # for deep copy
+""" optimization problem of the previous problem """
+
 def BestSum(targetSum, numbers):
     """ returns the best combination (least number required) that sums 
     to be the targetSum. None if no combination exists 
