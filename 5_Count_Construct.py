@@ -1,5 +1,5 @@
 def countCostruct(targetWord, wordbank):
-    "time and space complexity is the same as the preious example"
+    """time and space complexity is the same as the preious example"""
     if targetWord == '':
         return 1  # 1 way to construct the target word
 
@@ -14,7 +14,7 @@ def countCostruct(targetWord, wordbank):
         return construct_count
 
 def countCostruct_memoized(targetWord, wordbank, memo = {}):
-    "time and space complexity is the same as the previous example"
+    """time and space complexity is the same as the previous example"""
     if targetWord in memo:
         return memo[targetWord]
 
