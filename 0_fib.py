@@ -26,10 +26,22 @@ def fib_generator_memoized(term, memo = {}):
         return memo[term]
 
 
+def fib_tabulation(term):
+    """ O(n) time, O(n) space"""
+    table = [0] * (term + 2)  # initialize a term-size array with initialized value = 0
+    table[0] = 0
+    table[1] = 1
+    for index in range(term):
+        table[index + 1] += table[index]
+        table[index + 2] += table[index]
+
+    return table[term]
+
 def main():
     term = 100   
     # result = fib_generator(term)  # expect long run time
-    result = fib_generator_memoized(term) 
+    # result = fib_generator_memoized(term) 
+    result = fib_tabulation(6)
     print(result)
 
 if __name__ == '__main__':
